@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  color: #333;
+  text-align: center;
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+p.description {
+  font-size: 16px;
+  color: black;
+  margin-bottom: 20px;
+}
+
+form[action="/user/new"] button {
+  margin: 10px 0 20px 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  background: #ff6b6b;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form[action="/user/new"] button:hover {
+  background: #e55a5a;
+}
+
+.table-container {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto 20px;
+  overflow-x: auto; 
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+  background: #fefefe;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; 
+}
+
+th {
+  background: #4a90e2;
+  color: #fff;
+  padding: 14px 10px;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+td {
+  padding: 12px 10px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+tr:hover {
+  background: #d0ebff;
+  transition: 0.3s;
+}
+
+tr:nth-child(even) td {
+  background: #f5faff;
+}
+
+form button {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #fff;
+  transition: background 0.3s;
+}
+
+form[action*="edit"] button {
+  background: #ffa502;
+}
+
+form[action*="edit"] button:hover {
+  background: #e59400;
+}
+
+form[action*="delete"] button {
+  background: #ff4757;
+}
+
+form[action*="delete"] button:hover {
+  background: #e03e4f;
+}
+
+a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #2f3542;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+a:hover {
+  background: #57606f;
+}
+
+i {
+  margin-right: 6px;
+}
+
+@media (max-width: 768px) {
+  table, th, td {
+    font-size: 14px;
+  }
+  form button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  thead {
+    display: none; 
+  }
+
+  tr {
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: #fff;
+    padding: 10px;
+  }
+
+  td {
+    text-align: right;
+    padding: 8px 10px;
+    border: none;
+    position: relative;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+    text-align: left;
+    color: #333;
+  }
+
+  form button {
+    width: 48%;
+    margin: 5px 1%;
+  }
+}

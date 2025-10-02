@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/home.css">
+  <link rel="icon" href="/logo.png">
+</head>
+<body>
+  <div class="container">
+    <h1>
+      <i class="fas fa-users"></i> Welcome to Our User Portal 🚀
+    </h1>
+    <p>
+      <i class="fas fa-database"></i> Manage users easily with<strong>Express.js</strong> and <strong>MySQL</strong>. 
+      <br>
+      <i class="fas fa-edit"></i> Browse the user list, update details, or <i class="fas fa-trash"></i> remove accounts securely.
+    </p>
+    <h2>
+      <i class="fas fa-user-check"></i> The total number of users are : <%= count %>
+    </h2>
+    <p>
+      <i class="fas fa-handshake"></i> Want to be a part of this growing community?
+      Click below to join us today!
+    </p>
+    <button id="joinBtn"><i class="fas fa-user-plus"></i> Join us today!</button>
+    <a href="http://localhost:8080/user"><i class="fas fa-eye"></i> Show Users</a>
+  </div>
+</body>
+</html>

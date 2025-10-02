@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delete User</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="/delete.css">
+  <link rel="icon" href="/logo.png">
+</head>
+<body>
+  <div class="container">
+    <h2><i class="fas fa-user-times"></i> Delete User Account</h2>
+    <p class="description">
+      You are about to delete the account of <strong>
+        <%= user.email %>
+      </strong>. This action <span class="warning">cannot be undone</span>. Please enter your password to confirm deletion.
+    </p>
+
+    <form method="post" action="/user/<%= user.id %>?_method=DELETE">
+      <label for="password"><i class="fas fa-key"></i> Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password" required />
+      <button type="submit"><i class="fas fa-trash-alt"></i> Delete User</button>
+    </form>
+    <a href="/user"><i class="fas fa-arrow-left"></i> Back to Users</a>
+  </div>
+</body>
+</html>
